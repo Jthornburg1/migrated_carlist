@@ -8,12 +8,13 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, ChildPhotoVCDelegate {
 
     @IBOutlet weak var tableView: UITableView!
     
     var vehicles = [VehicleModel]()
     let tableCellId = "VehicleCell"
+    var childPhotoVC: PhotoViewController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +29,22 @@ class ViewController: UIViewController {
             self.tableView.reloadData()
         }
         
+    }
+    
+    // delegate
+    func removeChildVC() {
+        childPhotoVC?.willMove(toParentViewController: nil)
+        childPhotoVC?.view.removeFromSuperview()
+        childPhotoVC?.removeFromParentViewController()
+        childPhotoVC = nil
+    }
+    
+    func configureChildViewController(childController: UIViewController) {
+        childController.view.frame = self.view.frame
+        addChildViewController(childController)
+        self.view.addSubview(childController.view)
+        childController.didMove(toParentViewController: self)
+        childController.willMove(toParentViewController: self)
     }
 }
 
@@ -45,6 +62,11 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        guard let url = URL(string: vehicles[indexPath.row].photoUrl) else { return }
+        childPhotoVC = PhotoViewController()
+        childPhotoVC?.delegate = self
+        childPhotoVC!.vehiclePhotoUrl = url
+        configureChildViewController(childController: self.childPhotoVC!)
     }
 }
 

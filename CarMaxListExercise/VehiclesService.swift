@@ -25,4 +25,13 @@ struct VehiclesService {
             })
         }
     }
+    
+    func getPhotoData(from url: URL, completion: @escaping (Data?) -> ()) {
+        let session = URLSession.shared
+        session.dataTask(with: url) { (data, resposne, error) in
+            DispatchQueue.main.async(execute: {
+                completion(data)
+            })
+        }.resume()
+    }
 }

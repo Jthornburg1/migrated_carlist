@@ -20,6 +20,8 @@
 		B1B1DC4C20F28881005051D1 /* VehiclesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B1DC4B20F28881005051D1 /* VehiclesService.swift */; };
 		B1B1DC4F20F28976005051D1 /* VehiclesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B1DC4E20F28976005051D1 /* VehiclesModel.swift */; };
 		B1B1DC5120F289A4005051D1 /* VehicleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B1DC5020F289A4005051D1 /* VehicleModel.swift */; };
+		B1B1DC5420F2E8F7005051D1 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B1DC5220F2E8F7005051D1 /* PhotoViewController.swift */; };
+		B1B1DC5520F2E8F7005051D1 /* PhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1B1DC5320F2E8F7005051D1 /* PhotoViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,8 @@
 		B1B1DC4B20F28881005051D1 /* VehiclesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehiclesService.swift; sourceTree = "<group>"; };
 		B1B1DC4E20F28976005051D1 /* VehiclesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehiclesModel.swift; sourceTree = "<group>"; };
 		B1B1DC5020F289A4005051D1 /* VehicleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleModel.swift; sourceTree = "<group>"; };
+		B1B1DC5220F2E8F7005051D1 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
+		B1B1DC5320F2E8F7005051D1 /* PhotoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +124,8 @@
 				B1B1DC4720F25910005051D1 /* VehicleCell.swift */,
 				B1B1DC4820F25910005051D1 /* VehicleCell.xib */,
 				B1B1DC4B20F28881005051D1 /* VehiclesService.swift */,
+				B1B1DC5220F2E8F7005051D1 /* PhotoViewController.swift */,
+				B1B1DC5320F2E8F7005051D1 /* PhotoViewController.xib */,
 			);
 			path = CarMaxListExercise;
 			sourceTree = "<group>";
@@ -266,6 +272,7 @@
 				B1B1DC2120F2582C005051D1 /* LaunchScreen.storyboard in Resources */,
 				B1B1DC4A20F25910005051D1 /* VehicleCell.xib in Resources */,
 				B1B1DC1E20F2582C005051D1 /* Assets.xcassets in Resources */,
+				B1B1DC5520F2E8F7005051D1 /* PhotoViewController.xib in Resources */,
 				B1B1DC1C20F25828005051D1 /* Main.storyboard in Resources */,
 				B1B1DC4620F2587D005051D1 /* vehicles.plist in Resources */,
 			);
@@ -296,6 +303,7 @@
 				B1B1DC4920F25910005051D1 /* VehicleCell.swift in Sources */,
 				B1B1DC1920F25828005051D1 /* ViewController.swift in Sources */,
 				B1B1DC1720F25828005051D1 /* AppDelegate.swift in Sources */,
+				B1B1DC5420F2E8F7005051D1 /* PhotoViewController.swift in Sources */,
 				B1B1DC5120F289A4005051D1 /* VehicleModel.swift in Sources */,
 				B1B1DC4F20F28976005051D1 /* VehiclesModel.swift in Sources */,
 			);

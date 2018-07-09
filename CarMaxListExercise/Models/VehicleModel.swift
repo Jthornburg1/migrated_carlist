@@ -16,6 +16,7 @@ struct VehicleModel: Codable {
     var miles: String
     var storeName: String
     var highlights: String
+    var photoUrl: String
     
     init(dictionary: [String:AnyObject]) {
         stockNumber = dictionary["StockNumber"] as? Int ?? -1
@@ -24,5 +25,6 @@ struct VehicleModel: Codable {
         miles = dictionary["Miles"] as? String ?? ""
         storeName = dictionary["StoreName"] as? String ?? ""
         highlights = dictionary["Highlights"] as? String ?? ""
+        photoUrl = dictionary["PhotoUrl"] as? String ?? ""
     }
 }
